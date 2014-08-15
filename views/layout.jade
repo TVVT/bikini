@@ -2,7 +2,10 @@ doctype html
 html
 	head
 		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		link(rel='stylesheet', href='/javascripts/#{pageName}.js')
+		script(src='/components/platform/platform.js')
+		link(rel='import' href='/components/core-elements/core-elements.html')
+		link(rel='import' href='/components/paper-elements/paper-elements.html')
+		link(rel='stylesheet', href='/stylesheets/base.css')
+		link(rel='stylesheet', href='/stylesheets/#{pageName}.css')
 	body
 		block content

@@ -2,6 +2,8 @@ extends layout
 block content
 	h1= title
 	p Welcome to #{title}
-	input#name(type='text')
-	input#input_files(type='file' multiple)
-
+	form#fileForm(enctype='multipart/form-data')
+		input#name(type='text' name='name')
+		input#input_files(type='file' multiple name='file')
+		input#submit(type='submit')
+	include footer
